@@ -1,0 +1,22 @@
+#btn {
+    border-radius: 50px;
+    background-color: #F9D783;
+    border-style: none;
+    font-family: "DM sans";
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btn > img {
+    width: 24px;
+    height: 24px;
+}
+
+#btn:hover {
+    background-color: rgba(185, 60, 179, 0.589);
+    transition: ease-in-out 0.2s;
+    border: 1px solid black;
+    cursor: pointer;
+}
