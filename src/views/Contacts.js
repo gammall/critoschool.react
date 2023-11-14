@@ -21,18 +21,10 @@ const Contacts = () => {
 
       const user = {name, email, message}
       const json = JSON.stringify(user)
-  {/*
-      if (name.length < 1) {
-        alert("Please enter your name")
-      } else if (email.length < 3) {
-        alert("Please enter a valid Email address")
-      } else if (message.length < 1) {
-        alert("Please write something in the message box")
-      } else {
 
-      }
-      }
-      } */}
+      if (name.length < 2 || email.length < 3 || message < 10) {
+        alert("Please fill in all the information below")
+      } else {
 
       const result = await fetch('https://win23-assignment.azurewebsites.net/api/contactform', {
         method: "POST", 
@@ -48,6 +40,7 @@ const Contacts = () => {
           alert(`något gick fel, vänligen prova igen`)
           break
       }
+    }
     }
 
 
@@ -66,7 +59,7 @@ const Contacts = () => {
     </div>
     <form noValidate onSubmit={handleSubmit} className="RegForm">
       <div className="header-form">
-        <h1>Leave us a message for any information.</h1>
+        <h1 className="FormHeader">Leave us a message for any information.</h1>
       </div>
       <input type="text" placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)} id="Name"></input>
       <input type="email" placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)} id="Email"></input>
