@@ -39,6 +39,47 @@
     width: 400px;
     height: 230px;
     border: 1px solid rgb(65, 65, 65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#circle {
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#circle > img {
+    width: 40px;
+    height: 40px;
+    filter: invert(83%) sepia(100%) saturate(0%) hue-rotate(178deg) brightness(102%) contrast(102%);
+}
+
+#text {
+    width: 160px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: start;
+    padding: 30px;
+    font-family: 'DM sans', sans-serif;
+}
+
+#text > h1 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+#text > p {
+    font-size: 18px;
+    font-weight: 400;
 }
 
 .RegForm {
@@ -73,7 +114,7 @@
     outline: 1px solid orange;
 }
 
-.input-message {
+#Message {
     height: 150px !important;
 }
 
@@ -84,4 +125,9 @@
 
 .sectionfour {
     width: 100%;
+}
+
+.error {
+    border: 2px solid rgb(218, 93, 93) !important;
+    background-color: #ff808040;
 }

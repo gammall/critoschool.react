@@ -1,3 +1,7 @@
+.body {
+    overflow-y: hidden;
+}
+
 .navigation-bar {
     display: flex;
     justify-content: center;
